@@ -5,7 +5,7 @@ body {
 }
 
 #image-container img {
-    width: calc(100% - 24px);
+    width: calc(100% - 16px);
     height: auto;
     display: block;
     opacity: 0; 
@@ -14,7 +14,7 @@ body {
 
 #image-container img.loaded {   
     display: block;
-    margin: 12px;
+    margin: 8px;
 }
 
 #image-container img.loaded {
@@ -24,8 +24,8 @@ body {
 #button{
     position: fixed;
     z-index: 1000;
-    top: 24px;
-    right: 24px;
+    top: 16px;
+    right: 16px;
     width: 48px;
     height: 48px;
     border-radius: 48px;
