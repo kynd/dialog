@@ -65,3 +65,28 @@ a.icon {
     color: #000000;
     text-decoration: none;
 }
+
+.video-container {
+    position: relative;
+    margin: 8px 0;
+}
+
+
+.video-placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: block;
+}
+
+.video-container img {
+    width: calc(100% - 16px);
+    margin: 8px;
+}
+
+video {
+    width: calc(100% - 16px);
+    height: auto;
+    display: block;
+    margin: 8px;
+}

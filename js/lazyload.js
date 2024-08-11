@@ -15,6 +15,8 @@ document.addEventListener("DOMContentLoaded", function() {
     const container = document.getElementById('image-container');
 
     images.forEach(src => {
+        if (src.indexOf("output_1722451530") < 0) {
+          
         const img = document.createElement('img');
         img.src = src;
         img.loading = 'lazy';
@@ -25,5 +27,6 @@ document.addEventListener("DOMContentLoaded", function() {
         img.addEventListener('load', () => {
             img.classList.add('loaded');
         });
+        }
     });
 });
