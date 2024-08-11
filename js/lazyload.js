@@ -9,13 +9,28 @@ function shuffle(array) {
   }
 
 const images = shuffle(imageList.split("\n").map(filename => 'img/' + filename));
-
+//const movieIndex = Math.floor(Math.random() * images.length);
+const movieIndex = Math.floor(Math.random() * 10) + 2;
 
 document.addEventListener("DOMContentLoaded", function() {
     const container = document.getElementById('image-container');
 
-    images.forEach(src => {
+    images.forEach((src, i) => {
         if (src.indexOf("output_1722451530") < 0) {
+
+          //console.log(i);
+          if (i == movieIndex) {
+            const videoContainer = document.getElementById("video-container");
+            console.log(videoContainer);
+            if (videoContainer) {
+                videoContainer.parentNode.removeChild(videoContainer);
+                const imageContainer = document.getElementById("image-container");
+                if (imageContainer) {
+                    container.appendChild(videoContainer);
+                    videoContainer.style.display = "block";
+                }
+            }
+          }
           
           const img = document.createElement('img');
           img.src = src;
