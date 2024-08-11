@@ -15,16 +15,18 @@ document.addEventListener("DOMContentLoaded", function() {
     const container = document.getElementById('image-container');
 
     images.forEach(src => {
+        if (src.indexOf("output_1722451530") < 0) {
           
-        const img = document.createElement('img');
-        img.src = src;
-        img.loading = 'lazy';
-        img.alt = 'Image';
-        img.classList.add('fade-in');
-        container.appendChild(img);
+          const img = document.createElement('img');
+          img.src = src;
+          img.loading = 'lazy';
+          img.alt = 'Image';
+          img.classList.add('fade-in');
+          container.appendChild(img);
 
-        img.addEventListener('load', () => {
-            img.classList.add('loaded');
+          img.addEventListener('load', () => {
+              img.classList.add('loaded');
         });
+        }
     });
 });
